@@ -1,31 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+use App\Models\MovieNews;
+use Illuminate\Support\Facades\DB;
+
 
 Route::get('/', function () {
-    return view('active/index');
-})->name('index');
+    $news = MovieNews::orderBy('created_at', 'desc')->get();
+    return view('news', compact('news'));
+})->name('news');
 
-Route::get('/active/about', function () {
-    return view('active/about');
-})->name('about');
-
-Route::get('/active/services', function () {
-    return view('active/services');
-})->name('services');
-
-Route::get('/active/portfolio', function () {
-    return view('active/portfolio');
-})->name('portfolio');
-
-Route::get('/active/team', function () {
-    return view('active/team');
-})->name('team');
-
-Route::get('/active/blog', function () {
-    return view('active/blog');
-})->name('blog');
-
-Route::get('/active/contact', function () {
-    return view('active/contact');
-})->name('contact');
+Route::get('/news/{id}', function ($id) {
+    $article = MovieNews::findOrFail($id);
+    return view('news-detail', compact('article'));
+})->name('news.detail');
