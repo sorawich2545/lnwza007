@@ -13,9 +13,8 @@
                         Stay Updated with the Latest 
                         <span class="text-warning">Movie News</span>
                     </h1>
-                    <p class="lead mb-4">
-                        Discover the most recent updates from the world of cinema, including movie reviews, 
-                        industry insights, and exclusive behind-the-scenes content.
+                    <p class="lead mb-4 text-light">
+                        Your ultimate destination for the latest movie news, reviews, and industry insights
                     </p>
                     <div class="d-flex gap-3">
                         <a href="{{ route('news.index') }}" class="btn btn-light btn-lg">
@@ -27,6 +26,38 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
+                    <div class="team-info text-center">
+                        <h6 class="text-light mb-4 fw-bold display-6">Developed by:</h6>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="team-member text-center p-4 rounded" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                                    <div class="member-avatar mb-3">
+                                        <i class="bi bi-person-circle text-warning" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5 class="text-light mb-2 fw-bold">สรวิชญ์ สุดามาตร</h5>
+                                    <small class="text-light-50">67222420009</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-member text-center p-4 rounded" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                                    <div class="member-avatar mb-3">
+                                        <i class="bi bi-person-circle text-warning" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5 class="text-light mb-2 fw-bold">ปริญวัฒน์ เกียรฐิติพล</h5>
+                                    <small class="text-light-50">67222420002</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="team-member text-center p-4 rounded" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                                    <div class="member-avatar mb-3">
+                                        <i class="bi bi-person-circle text-warning" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5 class="text-light mb-2 fw-bold">ฐิติวัฒน์ ช้างจีน</h5>
+                                    <small class="text-light-50">67222420005</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -227,6 +258,30 @@
     
     .bg-primary {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    }
+    
+    .team-member {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .team-member:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.2) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .member-avatar i {
+        transition: all 0.3s ease;
+    }
+    
+    .team-member:hover .member-avatar i {
+        transform: scale(1.1);
+        color: #ffc107 !important;
+    }
+    
+    .team-info h6 {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 </style>
 @endpush

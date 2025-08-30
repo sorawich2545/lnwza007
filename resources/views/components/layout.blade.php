@@ -218,9 +218,9 @@
     </footer>
 
     <!-- Scroll to Top -->
-                    <button id="scrollToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow-medium d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; display: none;"></button>
-                    <i class="bi bi-arrow-up"></i>
-                </button>
+    <button id="scrollToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow-medium d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; display: none;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
