@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Active Bootstrap Template</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>@yield('title', 'Movie News Hub') - Movie News Hub</title>
+    <meta name="description" content="@yield('description', 'Stay updated with the latest movie news, reviews, and industry insights')">
+    <meta name="keywords" content="@yield('keywords', 'movie news, film reviews, cinema, entertainment')">
 
     <!-- Favicons -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
-    <link href="{{ 'https://fonts.googleapis.com' }}" rel="preconnect">
-    <link href="{{ 'https://fonts.gstatic.com' }}" rel="preconnect" crossorigin>
-    <link href="{{ 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap' }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -41,15 +41,16 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="/" class="logo d-flex align-items-center">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">Active.</h1>
+            <a href="{{ route('home') }}" class="logo d-flex align-items-center">
+                <h1 class="sitename">Movie News Hub</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route('news') }}">Movie News</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('news.index') }}" class="active">Movie News</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -68,8 +69,8 @@
                     <div class="widget">
                         <h3 class="widget-heading">About Us</h3>
                         <p class="mb-4">
-                            There live the blind texts. Separated they live in Bookmarksgrove
-                            right at the coast of the Semantics, a large language ocean.
+                            Your ultimate destination for the latest movie news, reviews, and industry insights. 
+                            Stay connected with the world of cinema.
                         </p>
                         <p class="mb-0">
                             <a href="#" class="btn-learn-more">Learn more</a>
@@ -80,14 +81,14 @@
                     <div class="widget">
                         <h3 class="widget-heading">Navigation</h3>
                         <ul class="list-unstyled float-start me-5">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Find Buyers</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('news.index') }}">News</a></li>
+                            <li><a href="#about">About Us</a></li>
                         </ul>
                         <ul class="list-unstyled float-start">
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,12 +97,12 @@
                         <h3 class="widget-heading">Recent Posts</h3>
                         <ul class="list-unstyled footer-blog-entry">
                             <li>
-                                <span class="d-block date">May 3, 2020</span>
-                                <a href="#">There live the Blind Texts</a>
+                                <span class="d-block date">Latest Movie News</span>
+                                <a href="{{ route('news.index') }}">Stay Updated with Cinema</a>
                             </li>
                             <li>
-                                <span class="d-block date">May 3, 2020</span>
-                                <a href="#">Separated they live in Bookmarksgrove right</a>
+                                <span class="d-block date">Industry Insights</span>
+                                <a href="{{ route('news.index') }}">Behind the Scenes Stories</a>
                             </li>
                         </ul>
                     </div>
@@ -120,10 +121,10 @@
                                 <a href="#"><span class="bi bi-linkedin"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="bi bi-google"></span></a>
+                                <a href="#"><span class="bi bi-instagram"></span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="bi bi-google-play"></span></a>
+                                <a href="#"><span class="bi bi-youtube"></span></a>
                             </li>
                         </ul>
                     </div>
@@ -131,10 +132,9 @@
                     <div class="widget">
                         <div class="footer-subscribe">
                             <h3 class="widget-heading">Subscribe</h3>
-                            <form action="forms/newsletter.php" method="post" class="php-email-form">
+                            <form action="#" method="post" class="php-email-form">
                                 <div class="mb-2">
-                                    <input type="text" class="form-control" name="email" placeholder="Enter your email">
-
+                                    <input type="email" class="form-control" name="email" placeholder="Enter your email">
                                     <button type="submit" class="btn btn-link">
                                         <span class="bi bi-arrow-right"></span>
                                     </button>
@@ -151,12 +151,8 @@
             </div>
 
             <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-                <p>© <span>Copyright</span> <strong class="px-1 sitename">Active.</strong> <span>All Rights Reserved</span></p>
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Movie News Hub</strong> <span>All Rights Reserved</span></p>
                 <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you've purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
                     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                 </div>
             </div>
@@ -170,15 +166,10 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('assets/vendor/purecounter/purecounter.js') }}"></script>
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
     <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
     <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
