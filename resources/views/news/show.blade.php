@@ -39,7 +39,15 @@
                                 <span class="badge bg-secondary ms-2">{{ $article->movie_title }}</span>
                             </div>
                             
+                            @if($article->reference_link)
+                            <h1 class="display-5 fw-bold mb-3">
+                                <a href="{{ $article->reference_link }}" target="_blank" title="คลิกเพื่อไปยังแหล่งข่าวต้นฉบับ" class="text-decoration-none text-dark">
+                                    {{ $article->title }}
+                                </a>
+                            </h1>
+                            @else
                             <h1 class="display-5 fw-bold mb-3">{{ $article->title }}</h1>
+                            @endif
                             
                             <div class="article-meta d-flex flex-wrap align-items-center gap-3 mb-4">
                                 <div class="d-flex align-items-center">
@@ -61,7 +69,13 @@
 
                         <!-- Featured Image -->
                         <div class="article-image mb-4">
+                            @if($article->reference_link)
+                            <a href="{{ $article->reference_link }}" target="_blank" title="คลิกเพื่อไปยังแหล่งข่าวต้นฉบับ">
+                                <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="img-fluid rounded-3 shadow">
+                            </a>
+                            @else
                             <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="img-fluid rounded-3 shadow">
+                            @endif
                         </div>
 
                         <!-- Article Summary -->
@@ -142,6 +156,7 @@
                                 <span class="badge bg-dark">Movie News</span>
                             </div>
                         </div>
+
 
                         <!-- Share Buttons -->
                         <div class="share-buttons mb-5">
@@ -314,6 +329,40 @@
     
     .share-buttons .btn:hover {
         transform: translateY(-2px);
+    }
+    
+    .reference-link-section .card {
+        border-left: 4px solid #28a745;
+    }
+    
+    .reference-link-section .btn-success {
+        transition: all 0.3s ease;
+    }
+    
+    .reference-link-section .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    }
+    
+    .article-image a {
+        display: block;
+        transition: all 0.3s ease;
+    }
+    
+    .article-image a:hover {
+        transform: scale(1.02);
+    }
+    
+    .article-image a:hover img {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .display-5 a {
+        transition: all 0.3s ease;
+    }
+    
+    .display-5 a:hover {
+        color: var(--primary-color) !important;
     }
     
     .sidebar .widget {

@@ -23,6 +23,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMlUrnRvVHLBvwZo0XkdZj623NAasf7S8b9g&s',
                 'author' => 'Major Cineplex Reporter',
+                'reference_link' => 'https://www.majorcineplex.com/news/ian-malcolm-goodbye-jurassic-world-rebirth',
             ],
             [
                 'title' => 'Jurassic World Rebirth ปล่อยตัวอย่างแรกแล้ว! เผยโลเคชันถ่ายทำในประเทศไทย',
@@ -34,6 +35,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbXcyNG4AF0-xeXYrebpyTmDNEL5fN9MqqNw&s',
                 'author' => 'LSA Thailand',
+                'reference_link' => 'https://www.prachachat.net/breaking-news/news-1829160',
             ],
             [
                 'title' => 'สิ่งที่ต้องรู้ก่อนดู Jurassic World Rebirth: เรื่องราวใหม่หลังจาก Dominion 5 ปี',
@@ -56,6 +58,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7siP5H0P4QpPbfgV7jH3aXKWnaFQmdNA5w&s',
                 'author' => 'Major Cineplex',
+                'reference_link' => 'https://www.majorcineplex.com/news/jurassic-world-rebirth-318-million-opening',
             ],
             [
                 'title' => 'Jurassic World Rebirth รีวิว: กำเนิดใหม่สัตว์ล้านปีที่ยังคงเป็นของเล่นมนุษย์',
@@ -67,6 +70,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://i2.wp.com/images.squarespace-cdn.com/content/v1/672e1e9f7812cb6bfc7efab1/1738764551935-MYSIG1XL6B7JCZCQVF2K/Jurassic+World+Rebirth.jpg?w=1160&ssl=1',
                 'author' => 'LSA Thailand',
+                'reference_link' => 'https://today.line.me/th/v3/article/5yl2yvy',
             ],
             [
                 'title' => '"Jurassic World Rebirth" ดัน Soft Power ไทย! ณเดชน์ พากย์ไทย เตรียมฉาย 2 ก.ค.',
@@ -78,6 +82,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://siamturakij.com/assets/uploads/img_news/28/main/1751457038_28.jpg',
                 'author' => 'StarEnews',
+                'reference_link' => 'https://starenews.com/jurassic-world-rebirth-thailand-premiere/?amp=1',
             ],
             [
                 'title' => 'สัมภาษณ์พิเศษ Scarlett Johansson: ภาพยนตร์ไดโนเสาร์คือความฝันในวัยเด็กของฉัน',
@@ -89,6 +94,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAPg90mGG8MHnbJ9sQE8z0OC5QRrDtEDH3MA&s',
                 'author' => 'Vietnam Plus',
+                'reference_link' => 'https://www.vietnam.vn/th/phong-van-doc-quyen-scarlett-johansson-phim-khung-long-la-giac-mo-tu-be-cua-toi',
             ],
             [
                 'title' => 'โปรแกรมหนัง 2025: Jurassic World Rebirth นำทัพหนังใหม่เดือนกรกฎาคม',
@@ -100,6 +106,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Gareth Edwards',
                 'image_url' => 'https://preview.redd.it/with-jurassic-world-rebirth-opening-in-july-2-2025-theres-v0-37m8nj1n5m9e1.jpeg?auto=webp&s=33b4a900672279b42ad10481a7c3dc996aaa5174',
                 'author' => 'Kapook Movie',
+                'reference_link' => 'https://movie.kapook.com/view284413.html',
             ],
             [
                 'title' => 'Superman 2025 ฮีโร่ผู้มากอบกู้หนังซูเปอร์ฮีโร่ที่แท้ทรู',
@@ -111,6 +118,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => ' James Gunn',
                 'image_url' => 'https://www.dailynews.co.th/wp-content/uploads/2025/07/11-13.jpg',
                 'author' => 'Daily News Onnline',
+                'reference_link' => 'https://www.ktc.co.th/article/entertainment/movie/new-movie-releases-thailand-2025',
             ],
             [
                 'title' => 'F1 หนังรถสูตรหนึ่ง นำแสดงโดย แบรด พิทท์ เตรียมเข้าโรง มิถุนายน 2025',
@@ -122,6 +130,7 @@ class MovieNewsSeeder extends Seeder
                 'director' => 'Joseph Kosinski',
                 'image_url' => 'https://mainstand.co.th/storage/news/content/388_F1BradPitt001.jpg',
                 'author' => 'Mainstand',
+                'reference_link' => 'https://www.ktc.co.th/article/entertainment/movie/new-movie-releases-thailand-2025',
             ],
         ];
 

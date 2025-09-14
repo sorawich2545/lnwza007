@@ -114,9 +114,16 @@
                             </div>
                             
                             <div class="mt-auto">
-                                <a href="{{ route('news.show', $article->id) }}" class="btn btn-primary w-100">
-                                    Read More <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
+                                <div class="d-flex gap-2">
+                                    <a href="{{ route('news.show', $article->id) }}" class="btn btn-primary flex-grow-1">
+                                        Read More <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                    @if($article->reference_link)
+                                        <a href="{{ $article->reference_link }}" target="_blank" class="btn btn-outline-success" title="อ่านจากแหล่งข่าวต้นฉบับ">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -220,6 +227,16 @@
     .btn-light:hover {
         background: #f8f9fa;
         border-color: #adb5bd;
+    }
+    
+    .news-card .btn-outline-success {
+        transition: all 0.3s ease;
+        min-width: 40px;
+    }
+    
+    .news-card .btn-outline-success:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
     }
 </style>
 @endpush

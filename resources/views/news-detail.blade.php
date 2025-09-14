@@ -23,11 +23,23 @@
       <div class="row">
         <div class="col-lg-8">
           <article class="article">
+            @if($article->reference_link)
+            <div class="post-img">
+              <a href="{{ $article->reference_link }}" target="_blank" title="คลิกเพื่อไปยังแหล่งข่าวต้นฉบับ">
+                <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="img-fluid">
+              </a>
+            </div>
+
+            <h2 class="title">
+              <a href="{{ $article->reference_link }}" target="_blank" title="คลิกเพื่อไปยังแหล่งข่าวต้นฉบับ">{{ $article->title }}</a>
+            </h2>
+            @else
             <div class="post-img">
               <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="img-fluid">
             </div>
 
             <h2 class="title">{{ $article->title }}</h2>
+            @endif
 
             <div class="meta-top">
               <ul>
@@ -71,6 +83,7 @@
                 <li><a href="{{ route('news.index') }}">{{ $article->genre }}</a></li>
               </ul>
             </div>
+
 
           </article>
         </div>
@@ -337,6 +350,52 @@
     .back-to-news .btn {
         padding: 12px 30px;
         font-weight: 600;
+    }
+    
+    .reference-link-section {
+        border-left: 4px solid #28a745;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .reference-link-section h5 {
+        color: #28a745;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .reference-link-section h5 i {
+        margin-right: 8px;
+    }
+    
+    .reference-link-section .btn {
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .reference-link-section .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    }
+    
+    .post-img a {
+        display: block;
+        transition: all 0.3s ease;
+    }
+    
+    .post-img a:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .title a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .title a:hover {
+        color: #667eea;
+        text-decoration: none;
     }
     
     @media (max-width: 768px) {

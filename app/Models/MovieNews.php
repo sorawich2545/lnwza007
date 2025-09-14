@@ -18,6 +18,7 @@ class MovieNews extends Model
         'director',
         'image_url',
         'author',
+        'reference_link',
     ];
 
     protected $casts = [

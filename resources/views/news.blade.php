@@ -47,8 +47,13 @@
                 <strong>Release:</strong> {{ $article->release_date->format('M Y') }}
               </small>
             </div>
-            <div class="mt-3">
-              <a href="{{ route('news.show', $article->id) }}" class="readmore stretched-link">Read More <i class="bi bi-arrow-right"></i></a>
+            <div class="mt-3 d-flex justify-content-between align-items-center">
+              <a href="{{ route('news.show', $article->id) }}" class="readmore">Read More <i class="bi bi-arrow-right"></i></a>
+              @if($article->reference_link)
+                <a href="{{ $article->reference_link }}" target="_blank" class="btn btn-outline-primary btn-sm" title="อ่านจากแหล่งข่าวต้นฉบับ">
+                  <i class="bi bi-box-arrow-up-right"></i> แหล่งข่าว
+                </a>
+              @endif
             </div>
           </article>
         </div>
@@ -57,3 +62,40 @@
     </div>
   </section>
 @endsection
+
+@push('styles')
+<style>
+    .news-item .btn-outline-primary {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+    }
+    
+    .news-item .btn-outline-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    }
+    
+    .news-item .readmore {
+        font-size: 0.9rem;
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .news-item .readmore:hover {
+        color: #5a6fd8;
+        text-decoration: none;
+    }
+    
+    .news-item .readmore i {
+        transition: transform 0.3s ease;
+    }
+    
+    .news-item .readmore:hover i {
+        transform: translateX(3px);
+    }
+</style>
+@endpush
